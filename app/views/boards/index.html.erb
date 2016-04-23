@@ -1,2 +1,5 @@
-<h1>Boards#index</h1>
-<p>Find me in app/views/boards/index.html.erb</p>
+<h4><%= "#{current_user.email}'s" %> Board </h4>
+<p><% @boards.each do  |board| %>
+    <%= board.name %>
+    <%= board.setting %>
+    <% end %>
