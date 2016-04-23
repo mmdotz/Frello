@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'board/index'
+
+  get 'board/new'
+
+  get 'board/edit'
+
+  get 'board/create'
+
+  get 'board/destroy'
+
   get 'users/index'
 
   get 'users/new'
