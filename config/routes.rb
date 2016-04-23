@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'board/index'
+  get 'boards/index'
 
-  get 'board/new'
+  get 'boards/new'
 
-  get 'board/edit'
+  get 'boards/edit'
 
-  get 'board/create'
+  get 'boards/create'
 
-  get 'board/destroy'
+  get 'boards/destroy'
 
   get 'users/index'
 
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: "users#index"
+  root to: "boards#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

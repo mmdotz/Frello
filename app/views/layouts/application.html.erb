@@ -11,6 +11,6 @@
 <%= yield %>
 
 </body>
-<p> Current user: <%= current_user.email %></p>
+<p> Current user: <%= current_user.email unless current_user.nil? %></p>
 
 </html>
