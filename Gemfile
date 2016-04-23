@@ -27,6 +27,8 @@ gem 'puma'
 
 gem 'devise'
 
+gem 'materialize-sass'
+
 group :production do
   gem 'rails_12factor'
 end
