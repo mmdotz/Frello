@@ -6,3 +6,5 @@ class CreateJoinTableMembership < ActiveRecord::Migration
     end
   end
 end
+
+#20160422221306

@@ -1,2 +1,19 @@
-<h1>Boards#create</h1>
-<p>Find me in app/views/boards/create.html.erb</p>
+<h1>Create a new Frello Board</h1>
+<%= form_for(@board) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :setting %>
+    <%= f.text_field :setting %>
+  </div>
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="actions">
+    <% f.submit %>
+  </div>
+<% end %>
