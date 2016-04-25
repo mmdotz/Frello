@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'boards/destroy'
 
   resources :boards
-  devise_for :users
+  devise_for :users, :path_prefix => 'my'
   resources :users
 
   root to: "boards#index"
