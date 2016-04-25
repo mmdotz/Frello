@@ -1,26 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'boards/index'
-  get 'boards/new'
-  get 'boards/edit'
 
   post 'boards/create'
 
   get 'boards/destroy'
 
-  get 'users/index'
-
-  get 'users/new'
-
-  get 'users/show'
-
-  get 'users/create'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
+  resources :boards
   devise_for :users
+  resources :users
 
   root to: "boards#index"
   # The priority is based upon order of creation: first created -> highest priority.
