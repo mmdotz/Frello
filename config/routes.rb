@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
 
-
   post 'boards/create'
 
   get 'boards/destroy'
 
   resources :boards
-  devise_for :users, :path_prefix => 'my'
-  resources :users
+  devise_for :users
 
   root to: "boards#index"
   # The priority is based upon order of creation: first created -> highest priority.

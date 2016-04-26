@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
   def destroy
   end
 
-  protected
+  private
 
   def set_board
     @board = Board.find(params[:id])
