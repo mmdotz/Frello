@@ -33,5 +33,6 @@ More information in the Gemfile
 
 ##More information
 - UMLs and wireframes will go here
+- Current [Trello](https://trello.com/b/rAKcT4PR/frello) board
 
 ##Credits and Acknowledgements

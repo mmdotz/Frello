@@ -3,5 +3,4 @@ class Card < ActiveRecord::Base
   has_many :comments
   has_many :checklists
   has_many :members 
-
 end
