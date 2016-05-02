@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
     respond_to do |format|
       if @board.save
-        format.html { redirect_to item_path(@board), notice: 'You created a new Frello Board!' }
+        format.html { redirect_to board_path(@board), notice: 'You created a new Frello Board!' }
       else
         format.html { render :new }
       end

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Frello</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-<p> Current user: <%= current_user.email unless current_user.nil? %></p>
-
+  <head>
+    <title>Frello</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <nav>
+    <div class="nav-wrapper">
+      <div class="brand-logo center">Frello</div>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><%= link_to 'Boards', boards_path %> </li>
+        <li><%= link_to 'Create a new Board', boards_create_path, method: :post %></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <body>
+    <%= yield %>
+    </body>
+    <p> Current user: <%= current_user.email unless current_user.nil? %></p>
+  </div>
 </html>

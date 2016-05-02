@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  post 'boards/create'
-
-  get 'boards/destroy'
-
   resources :boards
   devise_for :users
 

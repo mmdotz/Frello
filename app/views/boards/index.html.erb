@@ -1,4 +1,4 @@
-<h4><%= "#{current_user.email}'s" %> Board </h4>
+<h4><%= "#{current_user.email}'s" %> Boards. Click on any board.</h4>
 <p><% @boards.each do  |board| %>
     <%= board.name %>
     <%= board.setting %>
