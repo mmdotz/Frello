@@ -1,5 +1,15 @@
 <h4><%= "#{current_user.email}'s" %> Boards. Click on any board.</h4>
-<p><% @boards.each do  |board| %>
-    <%= board.name %>
-    <%= board.setting %>
+
+<div class="row">
+  <p>
+  <% @boards.each_slice(3) do  |row| %>
+    <% row.each_with_index do |board, index| %>
+    <div class="col s6">
+      <%= link_to "#{board.name}", board_path(board) %>
+      <%= board.setting %>
+    </div>
     <% end %>
+  <% end %>
+  </p>
+  </div>
+</div>
