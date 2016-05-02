@@ -1,5 +1,8 @@
 class Board < ActiveRecord::Base
-  belongs_to :user #scope owner is true?
-  has_many   :members, class_name: "User", foreign_key: "member_id"
+  belongs_to :user
+  has_many   :memberships #join
   has_many   :cards
+
+  validates_associated          :cards
+  validates                     :user_id, presence: true
 end
