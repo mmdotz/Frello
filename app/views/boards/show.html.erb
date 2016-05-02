@@ -8,3 +8,7 @@ delete card  -->
 
 <!-- Page will show Board name at top left
 Index of all that boards cards -->
+
+<% @cards.each do |card| %>
+  <%= card.title %>
+  <% end %>
