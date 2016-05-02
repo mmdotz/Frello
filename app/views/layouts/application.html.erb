@@ -12,7 +12,7 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><%= link_to 'Boards', boards_path %> </li>
         <li><%= link_to 'Create a new Board', new_board_path %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path %> </li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
       </ul>
     </div>
   </nav>
