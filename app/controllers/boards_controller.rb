@@ -12,6 +12,7 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+    @cards = @board.cards
   end
 
   def edit
