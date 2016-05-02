@@ -32,7 +32,8 @@ class BoardsController < ApplicationController
     @board.destroy
 
     respond_to do |format|
-    format.html { redirect_to @boards, notice: 'Your board was removed from the list.' }
+    format.html { redirect_to root_path, notice: 'Your board was removed from the list.' }
+    end
   end
 
   private

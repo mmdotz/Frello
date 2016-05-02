@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+
   resources :boards
   resources :cards, :except => [:index]
 
@@ -7,7 +13,9 @@ Rails.application.routes.draw do
     resources :cards
   end
 
-  devise_for :users
+  resources :users do
+    resources :boards
+  end
 
   root to: "boards#index"
   # The priority is based upon order of creation: first created -> highest priority.
