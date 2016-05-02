@@ -21,7 +21,8 @@ class CardsController < ApplicationController
     @card.destroy
 
     respond_to do |format|
-    format.html { redirect_to @board, notice: "Card was deleted." }
+      format.html { redirect_to @board, notice: "Card was deleted." }
+    end
   end
 
   private
