@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'cards/index'
+
+  get 'cards/new'
+
+  get 'cards/create'
+
+  get 'cards/edit'
+
+  get 'cards/update'
+
+  get 'cards/destroy'
+
   resources :boards
   devise_for :users
 
