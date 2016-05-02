@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :create, :destroy]
+  before_action :set_board, only: [:show, :edit, :update, :destroy]
 
   def index
     @boards = current_user.boards
@@ -36,6 +36,6 @@ class BoardsController < ApplicationController
   end
 
   def board_params
-    params.require(:board).permit(:name, :setting, :category)
+    params.require(:board).permit(:name, :setting, :category, :user_id)
   end
 end

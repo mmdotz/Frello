@@ -1,6 +1,7 @@
 <h1>Create a new Frello Board</h1>
 <%= form_for(@board) do |f| %>
   <div class="field">
+    <%= f.hidden_field :user_id, value: @user.id %>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
