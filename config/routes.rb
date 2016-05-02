@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'cards/index'
-
-  get 'cards/new'
-
-  get 'cards/create'
-
-  get 'cards/edit'
-
-  get 'cards/update'
-
-  get 'cards/destroy'
-
   resources :boards
+  resources :cards, :except => [:index]
+
+  resources :boards do
+    resources :cards
+  end
+
   devise_for :users
 
   root to: "boards#index"

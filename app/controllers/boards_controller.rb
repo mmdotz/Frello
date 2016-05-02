@@ -29,6 +29,10 @@ class BoardsController < ApplicationController
   end
 
   def destroy
+    @board.destroy
+
+    respond_to do |format|
+    format.html { redirect_to @boards, notice: 'Your board was removed from the list.' }
   end
 
   private
